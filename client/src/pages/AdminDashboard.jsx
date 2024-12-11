@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import EditModalAdmin from '../components/EditModalAdmin';
 import DeleteConfirmationAdmin from '../components/DeleteConfirmationAdmin';
-import HeaderAdmin from '../components/HeaderAdmin';
+
 
 const AdminDashboard = () => {
   const { users } = useSelector(state => state.admin)

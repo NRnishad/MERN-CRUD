@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import userAxiosInstance from '../utils/userAxiosInstance';
 import { setCurrentUser, setError, setLoading } from '../redux/slices/userSlice';
-import Header from '../components/Header';
+
 
 const Profile = () => {
   const dispatch = useDispatch()
@@ -44,7 +44,6 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-3xl font-bold text-center mb-8 text-black">Hi, {currentUser.Name}</h1>
         <div className="bg-white shadow-lg rounded-lg p-8 max-w-md mx-auto">

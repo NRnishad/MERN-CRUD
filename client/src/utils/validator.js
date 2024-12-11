@@ -10,6 +10,6 @@ export const checkEmail = (email)=>{
 }
 
 export const checkPassword = (password)=>{
-  const hasError = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password);
-  return hasError? false: 'Password must contain upper(1),length(6-16),special char(1)'
+  const hasError = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/.test(password);
+  return hasError? false: 'Password must Be at least 8 characters longContain at least one letter,Contain at least one number'
 }
