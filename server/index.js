@@ -10,7 +10,7 @@ import adminRoute from './routes/adminRoute.js';
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("Database connected locally"))
+  .then(() => console.log("Database connected"))
   .catch((error) => console.log("Database connection failed:", error));
 
 const app = express();

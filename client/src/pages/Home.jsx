@@ -14,8 +14,8 @@ const Home = () => {
             <h1 className="text-4xl font-bold text-black">Welcome, {currentUser.Name}😎</h1>
           </div>
         ) : (
-          <div className="space-y-6 ">
-           
+          <div className="space-y-6 h-64">
+           <h3>Plese Login or Sign Up Ones More ....</h3>
           <div className="space-x-4">
             <Link 
               to="/login" 

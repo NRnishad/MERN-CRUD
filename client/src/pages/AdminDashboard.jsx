@@ -30,7 +30,7 @@ const AdminDashboard = () => {
             <div key={user._id} className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
               <div className="relative mb-4">
                 <img
-                  alt={`${user.Name}'s profile picture`}
+                  alt={`profile picture`}
                   src={`http://localhost:3000${user?.ProfilePic || '/uploads/userAvatar.png'}`}
                   className="w-24 h-24 rounded-full object-cover border-2 border-gray-200"
                 />

@@ -18,11 +18,11 @@ const postLogin = async (req,res)=>{
     if(!userData){
       return res.status(400).json('User not found');
     }else{
-      const checkPassword = await bcrypt.compare(password, userData.Password)
+      const checkPassword = await userData.verifyPassword(password)
       if(!checkPassword){
          return res.status(400).json('Password mismatch')
       }else{
-        const token = await jwt.sign({_id: userData._id}, process.env.JWT_SECRET, {expiresIn: '1d'})
+        const token = await userData.getJWT()
         res.cookie("token", token, {
           httpOnly: true,
           secure: false,
@@ -53,7 +53,7 @@ const postSignup = async (req,res)=>{
       console.log(userData);
       
       if(userData){
-        const token = await jwt.sign({_id:userData._id}, process.env.JWT_SECRET, {expiresIn: '1d'})
+        const token = await userData.getJWT()
         res.cookie("token", token, {
           httpOnly: true,
           secure: false,
